@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "健康说",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "u--input": "/uni_modules/uview-ui/components/u--input/u--input",
+    "u-button": "/uni_modules/uview-ui/components/u-button/u-button",
+    "u-tabs": "/uni_modules/uview-ui/components/u-tabs/u-tabs",
+    "u--text": "/uni_modules/uview-ui/components/u--text/u--text",
+    "u-divider": "/uni_modules/uview-ui/components/u-divider/u-divider"
+  }
+}
