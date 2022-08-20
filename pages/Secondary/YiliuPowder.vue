@@ -1,12 +1,8 @@
 <!-- 杨继洲 抑瘤散 -->
 <template>
-	<view>
-		
-	</view>
+  <view> </view>
 </template>
 
-<script>
-</script>
+<script></script>
 
-<style>
-</style>
+<style></style>
