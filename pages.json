@@ -1,12 +1,66 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-		{
-			"path": "pages/index/index",
-			"style": {
-				"navigationBarTitleText": "uni-app"
+		  {
+            "path" : "pages/home/home",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "杨继洲医生集团",
+				"navigationStyle": "custom" ,// 隐藏系统导航栏
+                "enablePullDownRefresh": false,
+				"navigationBarTextStyle": "black" 
+            }
+            
+        }
+        ,{
+            "path" : "pages/exports/exports",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/user/user",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/detail/detail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "详情",
+                "enablePullDownRefresh": false
+            }
+        }
+    ],
+	"tabBar": {
+		"selectedColor": "#008000",
+		"list":[
+			{
+				"pagePath": "pages/home/home",
+				"text": "首页",
+				"iconPath": "static/home1.png",
+				"selectedIconPath": "static/home.png"
+			},
+			{
+				"pagePath": "pages/exports/exports",
+				"text": "专家说",
+				"iconPath": "static/export1.png",
+				"selectedIconPath": "static/export.png"
+			},
+			{
+				"pagePath": "pages/user/user",
+				"text": "我的",
+				"iconPath": "static/my1.png",
+				"selectedIconPath": "static/my.png"
 			}
-		}
-	],
+		]
+	},
 	"globalStyle": {
 		"navigationStyle": "custom",
 		"navigationBarTextStyle": "black",
