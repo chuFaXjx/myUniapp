@@ -55,14 +55,14 @@
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
 			}
+		},
+		{
+			"path": "pages/detail/detail",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"enablePullDownRefresh": false
+			}	
 		}
-		// {
-		// 	"path": "pages/detail/detail",
-		// 	"style": {
-		// 		"navigationBarTitleText": "详情",
-		// 		"enablePullDownRefresh": false
-		// 	}
-		// }
 	],
 	"tabBar": {
 		"selectedColor": "#008000",

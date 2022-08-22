@@ -6,7 +6,8 @@
     "pages/Secondary/Secondary",
     "pages/Secondary/lungCancer",
     "pages/Secondary/YiliuPowder",
-    "pages/thirdIevel/thirdIevel"
+    "pages/thirdIevel/thirdIevel",
+    "pages/detail/detail"
   ],
   "subPackages": [],
   "window": {
@@ -41,5 +42,6 @@
   },
   "usingComponents": {
     "cu-custom": "/colorui/components/cu-custom"
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }
