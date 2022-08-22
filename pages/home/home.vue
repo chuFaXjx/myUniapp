@@ -6,42 +6,63 @@
 				杨继洲医生集团
 			</view>
 			<view class="u-nav-slot1" slot="right" @click='handleModle'>
-				医生集团
+				<text>医生集团</text>
+				<view>
+					<u-picker :show="showpicker" :columns="columns" @confirm="confirm" @cancel='cancel'></u-picker>
+				</view>
 			</view>
+			
 		</u-navbar>
 		<!-- 轮播图 -->
-		<!--  <view>
-			<u-modal v-if="areaShow" title="新增空间" confirm-text="保存" cancel-text="取消" @cancel="cancelAdd" @confirm="confirmAdd">
-			<input type="text" v-model="areaTxt" placeholder="限填5个字" class="intxt" maxlength="5" />
-			</u-modal>
-		</view> -->
+	
 		<view class="u-demo-block">
-			<u-swiper :list="list5" @change="e => current = e.current" :autoplay="true">
+			<u-swiper :list="list5" @change="e => current = e.current" :autoplay="true" @click='handleSwap'>
 				<view slot="indicator" class="indicator">
 					<view class="indicator__dot" v-for="(item, index) in list5" :key="index"
 		 			:class="[index === current && 'indicator__dot--active']">
 					</view>
 				</view>
 			</u-swiper>
-			<u-gap bgColor="transparent" height="15"></u-gap>
+			<view><u-modal :show="show" :title="title" showCancelButton confirmColor='#ADB3AB' @confirm='confirm' @cancel="cancel">
+			<view class="slot-content">
+							<rich-text :nodes="content"></rich-text>
+						</view>
+			</u-modal></view>
+			<!-- <u-gap bgColor="transparent" height="15"></u-gap> -->
 		</view>
 		<!-- 网格布局 -->
-		<view>
-			<view class="grid-bg">
-				<view class='grid-item-bg' v-for="(item, index) in dataArr" :key="index"
-					@click="onClickItem(item, index)">
-					<view class="image">{{item.img}}</view>
-					<view class="text">{{item.text}}</view>
-				</view>
-			</view>
+		<view class='grid'>
+			  <u-grid
+			                :border="false"
+			                col="3"
+			        >
+			            <u-grid-item
+			                    v-for="(listItem,listIndex) in list"
+			                    :key="listIndex"
+			            >
+			                <u-icon
+			                        :customStyle="{paddingTop:20+'rpx'}"
+			                        :name="listItem.name"
+			                        :size="22"
+			                ></u-icon>
+							<navigator url="/pages/fit/fit" hover-class="navigator-hover">
+							<text class="grid-text">{{listItem.title}}</text>
+							</navigator>
+			
+			            </u-grid-item>
+			        </u-grid>
+			        <u-toast ref="uToast" />
 		</view>
 		<view class="font">
 			<text class='workspace'>名医工作室</text>
 		</view>
 		<view class="u-demo-block1">
 			<!-- 轮播图 -->
+			<navigator url="/pages/doctormain/doctormain" hover-class="navigator-hover">
 			<u-swiper :list="list3" previousMargin="30" nextMargin="30" circular :autoplay="true" radius="5"
-				bgColor="#ffffff"></u-swiper>
+				bgColor="#ffffff">
+			</u-swiper>
+			</navigator>
 		</view>
 		<view class="font1">
 			<text class='workspace'>资讯动态</text>
@@ -50,8 +71,10 @@
 		</view>
 		<view class='word'>
 			<view>
-				<text class='text'>科普动画 二孩妈妈的焦虑</text>
-				<text class='add'>2022-5-29</text>
+			<navigator url="/pages/wellknow/wellknow" hover-class="navigator-hover">
+			<text class='text'>科普动画 二孩妈妈的焦虑</text>
+			<text class='add'>2022-5-29</text>
+			</navigator>
 			</view>
 			<hr />
 			<view>
@@ -66,7 +89,9 @@
 		</view>
 		<view class="font2">
 			<text class='workspace'>合作单位</text>
-			<text class='more'>查看更多</text>
+			<navigator url="/pages/lookmore/lookmore" hover-class="navigator-hover">
+				<text class='more2'>查看更多</text>
+			</navigator>
 			<u-icon name="arrow-right" color="#999" size="18" class='arrow'></u-icon>
 		</view>
 		<view class='photo'>
@@ -79,10 +104,13 @@
 				<text class='p2'>杭州市庆春路79号</text>
 				<br />
 				<u-button text="三级甲等" class='btn1' size='large'></u-button>
-				<text class='detail'>详情 >> </text>
+				<navigator url="/pages/detail/detail" hover-class="navigator-hover">
+					<text class='detail'>详情 >> </text>
+				</navigator>
 			</view>
 		</view>
 		<hr />
+		<navigator url="/pages/workspace/workspace" hover-class="navigator-hover">
 		<view class='photo'>
 			<view class='imagebox'>
 				<img src="../../static/6.png" @click="click" alt=''>
@@ -99,6 +127,8 @@
 				
 			</view>
 		</view>
+		</navigator>
+		
 		<view class='connect'>
 			<text class='workspace1'>联系方式</text>
 		</view>
@@ -133,12 +163,47 @@
 	export default {
 		data() {
 			return {
+				current:0,
+				show:false,
+				showpicker:false,
+				title: "即将打开小程序",
+				content:'',
+				columns: [
+				                    ['医生集团', '司空监管', '后台平台']
+				                ],
+				 list: [{
+				                    name: 'photo',
+				                    title: '英才学术'
+				                    },
+				                    {
+				                        name: 'lock',
+				                        title: '公益健康'
+				                    },
+				                    {
+				                        name: 'star',
+				                        title: '医生集团'
+				                    },
+				                    {
+				                        name: 'hourglass',
+				                        title: '健康处方'
+				                    },
+				                    {
+				                        name: 'home',
+				                        title: '名医在线'
+				                    },
+				                    {
+				                        name: 'star',
+				                        title: '积分兑换'
+				                    },
+				                ],
+		
 				list5: [
+					// `<img src='../../static/1.png' alt=''>`,
 					'https://cdn.uviewui.com/uview/swiper/swiper3.png',
 					'https://cdn.uviewui.com/uview/swiper/swiper2.png',
 					'https://cdn.uviewui.com/uview/swiper/swiper1.png',
 				],
-				title: "GridView3",
+				
 				selectIndex: 0,
 				dataArr: this.getData(),
 				onReady() {
@@ -153,8 +218,7 @@
 				],
 				areaShow: false,
 				areaTxt: '',
-
-
+		
 
 			};
 		},
@@ -162,6 +226,9 @@
 			onClickItem(item, index) {
 				this.selectIndex = index
 
+			},
+			handleSwap(){
+				this.show=true;
 			},
 			getData() {
 				let dataArr = []
@@ -184,33 +251,22 @@
 			},
 
 			handleModle() {
-				console.log(2);
-				// this.areaShow = true;
-				uni.showModal({
-					title: '提示',
-					content: '内容',
-					success: function(res) {
-						if (res.confirm) {
-							console.log('用户点击确定');
-						} else if (res.cancel) {
-							console.log('用户点击取消');
-						}
-					}
-				})
+				this.showpicker=true;
+				
+			},
+			confirm(e){
+				console.log('confirm', e)
+				this.showpicker=false;
+				this.show=false;
+			},
+			cancel(){
+				this.showpicker=false;
+				this.show=false;
 			},
 			change(e) {
 				console.log('change', e);
 			},
-			detail(){
-				console.log(2222);
-				// uni.navigateTo({
-				// 		url: 'detail',
-				// 		fail: (res) => {
-				// 			console.log(res)
-				// 			}
-				// 		})
-					
-			}
+			
 			
 		}
 	}
@@ -220,8 +276,19 @@
 	.back {
 		background-color: #FFFFFF;
 		height: 100px;
-
 	}
+	.grid{
+		background-color: #ffffff;
+		margin-top: -14px;
+	}
+	 .grid-text {
+	        font-size: 14px;
+	        color: #909399;
+	        padding: 10rpx 0 20rpx 0rpx;
+	        /* #ifndef APP-PLUS */
+	        box-sizing: border-box;
+	        /* #endif */
+	    }
 
 	.u-nav-slot {
 		font-size: 22px;
@@ -311,7 +378,13 @@
 		border-radius: 50%;
 		height: 60px;
 	}
-
+	.u-navbar__content__title.data-v-95dec1ae{
+		margin-top: -17px;
+	}
+.u-navbar__content__title.data-v-95dec1ae{
+	width:100px;
+	height: 44px;
+}
 	.text {
 		margin-top: 10px;
 		display: block;
@@ -355,7 +428,12 @@
 	.more {
 		font-size: unset;
 		color: #000;
-		margin-top: 22px;
+		margin-top: 27px;
+	}
+	.more2{
+		font-size: unset;
+		color: #000;
+		margin-top: 30px;
 	}
 
 	.banner1 {
@@ -398,7 +476,7 @@
 
 	.imagebox {
 		width: 40px;
-		height: 40px;
+		height: 40px !important;
 		flex: 1;
 	}
 
@@ -466,5 +544,33 @@
 	.rightfont {
 		flex: 4;
 		margin-left: 10px;
+	}
+	.u-button--large.data-v-2bf0e569 {
+	    /* width: 100%; */
+	    width: 100px;
+	    height: 50px;
+	    padding: 0 15px;
+	}
+	.u-button.data-v-2bf0e569{
+		width: 100px !important;
+		height: 50px !important;
+		margin-top: 20px;
+	}
+	image {
+	    max-width: 100%;
+	    width: 140px;
+	    height: 140px;
+	    // inline-block: ;
+	    position: relative;
+	    z-index: 0;
+	}
+	.tele {
+	    flex: 1;
+	    width: 14px;
+	    height: 22px;
+	    font-size: 9px;
+	}
+	.u-grid-item.data-v-5b3a01af {
+		margin-top: 20px!important;
 	}
 </style>

@@ -6,11 +6,18 @@
     "pages/Secondary/Secondary",
     "pages/Secondary/lungCancer",
     "pages/Secondary/YiliuPowder",
-    "pages/thirdIevel/thirdIevel"
+    "pages/thirdIevel/thirdIevel",
+    "pages/detail/detail",
+    "pages/fit/fit",
+    "pages/doctormain/doctormain",
+    "pages/wellknow/wellknow",
+    "pages/shop/shop",
+    "pages/workspace/workspace",
+    "pages/lookmore/lookmore",
+    "pages/hdetail/hdetail"
   ],
   "subPackages": [],
   "window": {
-    "navigationStyle": "custom",
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "uni-app",
     "navigationBarBackgroundColor": "#F8F8F8",

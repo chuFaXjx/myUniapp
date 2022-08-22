@@ -55,15 +55,85 @@
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
 			}
+		},
+		{
+			"path": "pages/detail/detail",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": false
+			}
 		}
-		// {
-		// 	"path": "pages/detail/detail",
-		// 	"style": {
-		// 		"navigationBarTitleText": "详情",
-		// 		"enablePullDownRefresh": false
-		// 	}
-		// }
-	],
+		// 英才学术详情
+	    ,{
+            "path" : "pages/fit/fit",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "公益健康",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+		// 医生主页
+        ,{
+            "path" : "pages/doctormain/doctormain",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "医生主页",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+		// 科普详情
+        ,{
+            "path" : "pages/wellknow/wellknow",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "详情",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+		// 购买详情页
+        ,{
+            "path" : "pages/shop/shop",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "回到顶页",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+		// 名医工作室
+        ,{
+            "path" : "pages/workspace/workspace",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "名医工作室",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/lookmore/lookmore",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "医院",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+		// 医院详情
+        ,{
+            "path" : "pages/hdetail/hdetail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "详情",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	"tabBar": {
 		"selectedColor": "#008000",
 		"list": [{
@@ -87,7 +157,6 @@
 		]
 	},
 	"globalStyle": {
-		"navigationStyle": "custom",
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
