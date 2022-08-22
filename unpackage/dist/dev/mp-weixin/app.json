@@ -7,9 +7,6 @@
     "pages/Secondary/lungCancer",
     "pages/Secondary/YiliuPowder",
     "pages/thirdIevel/thirdIevel",
-<<<<<<< HEAD
-    "pages/detail/detail"
-=======
     "pages/detail/detail",
     "pages/fit/fit",
     "pages/doctormain/doctormain",
@@ -18,7 +15,6 @@
     "pages/workspace/workspace",
     "pages/lookmore/lookmore",
     "pages/hdetail/hdetail"
->>>>>>> shouye
   ],
   "subPackages": [],
   "window": {
