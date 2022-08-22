@@ -1,50 +1,56 @@
 
 .lungCancer-h1 {
-  font-size: 20px;
-  font-weight: 600;
-  margin: 20rpx 0 20rpx 20rpx;
+	font-size: 20px;
+	font-weight: 600;
+	margin: 20rpx 0 20rpx 20rpx;
 }
 .lungCancer-date {
-  color: #bbb6b6;
-  margin: 0 0 20rpx 20rpx;
+	color: #bbb6b6;
+	margin: 0 0 20rpx 20rpx;
 }
 .lungCancer-title-color {
-  /* width: 1%; */
-  text-align: center;
-  margin: 40rpx 80rpx 40rpx 80rpx;
-  background-color: #ffacaa;
-  color: #fff;
+	/* width: 1%; */
+	text-align: center;
+	margin: 40rpx 80rpx 40rpx 80rpx;
+	background-color: #ffacaa;
+	color: #fff;
 }
-
-/* .lungCancer-title-color-view {
-		background-color: #FFACAA;
-	} */
-.lungCancer-context {
-  margin: auto;
-  margin: 50rpx 20rpx 20rpx 20rpx;
+.lungCancer-context,
+.lungCancer-context-chir{
+	text-indent: 2em;
+	padding-bottom: 20px !important;
+	/* margin: auto; */
+	margin: 50rpx 20rpx 20rpx 20rpx;
+}
+.lungCancer-nutrition,
+.lungCancer-qualityFat{
+	text-indent: 2em;
+	margin: 0 20rpx 0 20rpx;
 }
 .lungCancer-imges {
-  width: 100%;
-  margin: 40rpx auto;
+	width: 95%;
+	margin: auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
 }
 .lungCancer-footer {
-  width: 100%;
-  display: flex;
-  position: fixed;
-  bottom: 0px;
-  background-color: #fff;
+	width: 100%;
+	display: flex;
+	position: fixed;
+	bottom: 0px;
+	background-color: #fff;
 }
 .lungCancer-footer-viewImage {
-  width: 30%;
+	width: 30%;
 }
 .lungCancer-footer-image-phone {
-  width: 40%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	width: 40%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .lungCancer-footer-It .u-button {
-  background-color: #ff8515 !important;
-  border: none !important;
+	background-color: #ff8515 !important;
+	border: none !important;
 }
 
