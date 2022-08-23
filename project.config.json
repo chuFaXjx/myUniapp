@@ -1,18 +1,19 @@
 {
-  "description": "项目配置文件，详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+  "appid": "wx7b85ab002ba2de66",
+  "compileType": "miniprogram",
+  "libVersion": "2.25.3",
   "packOptions": {
     "ignore": [],
     "include": []
   },
   "setting": {
-    "urlCheck": false,
+    "urlCheck": true,
+    "coverView": true,
     "es6": true,
     "postcss": true,
-    "minified": true,
-    "checkSiteMap": false,
-    "coverView": true,
     "lazyloadPlaceholderEnable": false,
     "preloadBackgroundData": false,
+    "minified": true,
     "autoAudits": false,
     "uglifyFileName": false,
     "uploadWithSourceMap": true,
@@ -34,13 +35,10 @@
     "useCompilerPlugins": false,
     "minifyWXML": true
   },
-  "compileType": "miniprogram",
-  "libVersion": "2.25.3",
-  "appid": "wx7b85ab002ba2de66",
-  "projectname": "my-Uniapp",
   "condition": {},
   "editorSetting": {
     "tabIndent": "insertSpaces",
     "tabSize": 2
-  }
+  },
+  "description": "项目配置文件，详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html"
 }

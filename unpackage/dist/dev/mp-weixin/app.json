@@ -14,7 +14,9 @@
     "pages/shop/shop",
     "pages/workspace/workspace",
     "pages/lookmore/lookmore",
-    "pages/hdetail/hdetail"
+    "pages/hdetail/hdetail",
+    "pages/wxlogin/wxlogin",
+    "pages/wxlogin/second/userAgreement"
   ],
   "subPackages": [],
   "window": {
