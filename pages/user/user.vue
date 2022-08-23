@@ -56,7 +56,7 @@
 export default {
 	data() {
 		return {
-			isLogin: true
+			isLogin: false
 		};
 	},
 	methods: {}
@@ -91,7 +91,7 @@ export default {
 		padding: 0 15px;
 		margin-top: 10px;
 		font-size: 17px;
-		.foot_left{
+		.foot_left {
 			text-align: center;
 		}
 	}
