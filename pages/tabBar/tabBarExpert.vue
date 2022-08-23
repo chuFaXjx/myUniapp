@@ -32,7 +32,6 @@
 						<u-divider text="分割线" :dot="true" lineColor="#ccc"></u-divider>
 					</view>
 				</view>
-
 			</view>
 		</view>
 	</view>

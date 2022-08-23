@@ -1,154 +1,178 @@
 {
-  "pages": [
-    // 第一项为启动时展示的页面。
-    {
-      "path": "pages/home/home",
-      "style": {
-        "navigationBarTitleText": "杨继洲医生集团",
-        "navigationStyle": "custom",
-        "enablePullDownRefresh": false,
-        "navigationBarTextStyle": "black"
-      }
-    },
-    {
-      //tabBar专家说页面
-      "path": "pages/tabBar/tabBarExpert",
-      "style": {
-        "navigationBarTitleText": "健康说",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/user/user",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      //二级页面路由
-      "path": "pages/Secondary/Secondary",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      //二级页面专家说-肺癌患者
-      "path": "pages/Secondary/lungCancer",
-      "style": {
-        "navigationBarTitleText": "详情",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      //二级页面专家说-抑瘤散
-      "path": "pages/Secondary/YiliuPowder",
-      "style": {
-        "navigationBarTitleText": "详情",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      //三级页面路由
-      "path": "pages/thirdIevel/thirdIevel",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/detail/detail",
-      "style": {
-        "navigationBarTitleText": "详情",
-        "navigationStyle": "custom",
-        "enablePullDownRefresh": false
-      }
-    },
-    // 英才学术详情
-    {
-      "path": "pages/fit/fit",
-      "style": {
-        "navigationBarTitleText": "公益健康",
-        "enablePullDownRefresh": false
-      }
-    },
-    // 医生主页
-    {
-      "path": "pages/doctormain/doctormain",
-      "style": {
-        "navigationBarTitleText": "医生主页",
-        "enablePullDownRefresh": false
-      }
-    },
-    // 科普详情
-    {
-      "path": "pages/wellknow/wellknow",
-      "style": {
-        "navigationBarTitleText": "详情",
-        "enablePullDownRefresh": false
-      }
-    },
-    // 购买详情页
-    {
-      "path": "pages/shop/shop",
-      "style": {
-        "navigationBarTitleText": "回到顶页",
-        "enablePullDownRefresh": false
-      }
-    },
-    // 名医工作室
-    {
-      "path": "pages/workspace/workspace",
-      "style": {
-        "navigationBarTitleText": "名医工作室",
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/lookmore/lookmore",
-      "style": {
-        "navigationBarTitleText": "医院",
-        "enablePullDownRefresh": false
-      }
-    },
-    // 医院详情
-    {
-      "path": "pages/hdetail/hdetail",
-      "style": {
-        "navigationBarTitleText": "详情",
-        "enablePullDownRefresh": false
-      }
-    }
-  ],
-  "tabBar": {
-    "selectedColor": "#008000",
-    "list": [
-      {
-        "pagePath": "pages/home/home",
-        "text": "首页",
-        "iconPath": "static/home1.png",
-        "selectedIconPath": "static/home.png"
-      },
-      {
-        "pagePath": "pages/tabBar/tabBarExpert",
-        "iconPath": "static/imges/expertLogo.png",
-        "selectedIconPath": "static/imges/expertLogo2.png",
-        "text": "专家说"
-      },
-      {
-        "pagePath": "pages/user/user",
-        "iconPath": "static/imges/myLogo.png",
-        "selectedIconPath": "static/imges/myLogo2.png",
-        "text": "我的"
-      }
-    ]
-  },
-  "globalStyle": {
-    "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "uni-app",
-    "navigationBarBackgroundColor": "#F8F8F8",
-    "backgroundColor": "#F8F8F8"
-  },
-  "uniIdRouter": {}
+	"pages": [
+		// 第一项为启动时展示的页面。
+		{
+			"path": "pages/home/home",
+			"style": {
+				"navigationBarTitleText": "杨继洲医生集团",
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": false,
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			//tabBar专家说页面
+			"path": "pages/tabBar/tabBarExpert",
+			"style": {
+				"navigationBarTitleText": "健康说",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/user/user",
+			"style": {
+				"navigationBarTitleText": "个人中心",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			//二级页面路由
+			"path": "pages/Secondary/Secondary",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			//二级页面专家说-肺癌患者
+			"path": "pages/Secondary/lungCancer",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			//二级页面专家说-抑瘤散
+			"path": "pages/Secondary/YiliuPowder",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			//三级页面路由
+			"path": "pages/thirdIevel/thirdIevel",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/detail/detail",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": false
+			}
+		},
+		// 英才学术详情
+		{
+			"path": "pages/fit/fit",
+			"style": {
+				"navigationBarTitleText": "公益健康",
+				"enablePullDownRefresh": false
+			}
+		},
+		// 医生主页
+		{
+			"path": "pages/doctormain/doctormain",
+			"style": {
+				"navigationBarTitleText": "医生主页",
+				"enablePullDownRefresh": false
+			}
+		},
+		// 科普详情
+		{
+			"path": "pages/wellknow/wellknow",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"enablePullDownRefresh": false
+			}
+		},
+		// 购买详情页
+		{
+			"path": "pages/shop/shop",
+			"style": {
+				"navigationBarTitleText": "回到顶页",
+				"enablePullDownRefresh": false
+			}
+		},
+		// 名医工作室
+		{
+			"path": "pages/workspace/workspace",
+			"style": {
+				"navigationBarTitleText": "名医工作室",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/lookmore/lookmore",
+			"style": {
+				"navigationBarTitleText": "医院",
+				"enablePullDownRefresh": false
+			}
+		},
+		// 医院详情
+		{
+			"path": "pages/hdetail/hdetail",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"enablePullDownRefresh": false
+			}
+		},
+		// 个人中心/我的论坛
+		{
+			"path": "pages/user/sonPages/myLunTan",
+			"style": {
+				"navigationBarTitleText": "我的论坛",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/user/sonPages/myChuFang",
+			"style": {
+				"navigationBarTitleText": "我的处方",
+				"enablePullDownRefresh": false
+			}
+
+		}
+	    ,{
+            "path" : "pages/user/sonPages/myChuFang",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"tabBar": {
+		"selectedColor": "#008000",
+		"list": [{
+				"pagePath": "pages/home/home",
+				"text": "首页",
+				"iconPath": "static/home1.png",
+				"selectedIconPath": "static/home.png"
+			},
+			{
+				"pagePath": "pages/tabBar/tabBarExpert",
+				"iconPath": "static/imges/expertLogo.png",
+				"selectedIconPath": "static/imges/expertLogo2.png",
+				"text": "专家说"
+			},
+			{
+				"pagePath": "pages/user/user",
+				"iconPath": "static/imges/myLogo.png",
+				"selectedIconPath": "static/imges/myLogo2.png",
+				"text": "我的"
+			}
+		]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {}
 }

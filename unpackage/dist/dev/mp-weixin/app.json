@@ -14,7 +14,8 @@
     "pages/shop/shop",
     "pages/workspace/workspace",
     "pages/lookmore/lookmore",
-    "pages/hdetail/hdetail"
+    "pages/hdetail/hdetail",
+    "pages/user/sonPages/myLunTan"
   ],
   "subPackages": [],
   "window": {

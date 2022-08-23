@@ -1,25 +1,25 @@
 {
-  "description": "项目配置文件。",
+  "appid": "wxd20152f73e4537d5",
+  "compileType": "miniprogram",
+  "libVersion": "2.25.3",
   "packOptions": {
     "ignore": [],
     "include": []
   },
   "setting": {
-    "urlCheck": false,
+    "coverView": true,
     "es6": true,
     "postcss": true,
     "minified": true,
-    "checkSiteMap": false,
+    "enhance": true,
+    "showShadowRootInWxmlPanel": true,
+    "packNpmRelationList": [],
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
       "outputPath": ""
     }
   },
-  "compileType": "miniprogram",
-  "libVersion": "2.25.3",
-  "appid": "wxd20152f73e4537d5",
-  "projectname": "my-Uniapp",
   "condition": {},
   "editorSetting": {
     "tabIndent": "insertSpaces",
