@@ -14,7 +14,11 @@
     "pages/shop/shop",
     "pages/workspace/workspace",
     "pages/lookmore/lookmore",
-    "pages/hdetail/hdetail"
+    "pages/hdetail/hdetail",
+    "pages/user/sonPages/myLunTan",
+    "pages/user/sonPages/myChuFang",
+    "pages/wxlogin/wxlogin",
+    "pages/wxlogin/second/userAgreement"
   ],
   "subPackages": [],
   "window": {
@@ -48,6 +52,5 @@
   },
   "usingComponents": {
     "cu-custom": "/colorui/components/cu-custom"
-  },
-  "sitemapLocation": "sitemap.json"
+  }
 }
