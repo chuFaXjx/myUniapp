@@ -134,16 +134,23 @@
 				"navigationBarTitleText": "我的处方",
 				"enablePullDownRefresh": false
 			}
-
+		},
+		// 注册页面
+		{
+			"path": "pages/wxlogin/wxlogin",
+			"style": {
+				"navigationBarTitleText": "注册",
+				"enablePullDownRefresh": true
+			}
 		}
+		// 用户协议
 	    ,{
-            "path" : "pages/user/sonPages/myChuFang",
+            "path" : "pages/wxlogin/second/userAgreement",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
+                "navigationBarTitleText": "用户协议",
                 "enablePullDownRefresh": false
             }
-            
         }
     ],
 	"tabBar": {

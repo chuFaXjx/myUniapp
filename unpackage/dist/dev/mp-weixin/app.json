@@ -15,7 +15,12 @@
     "pages/workspace/workspace",
     "pages/lookmore/lookmore",
     "pages/hdetail/hdetail",
+<<<<<<< HEAD
     "pages/user/sonPages/myLunTan"
+=======
+    "pages/wxlogin/wxlogin",
+    "pages/wxlogin/second/userAgreement"
+>>>>>>> yyk_uniapp
   ],
   "subPackages": [],
   "window": {
