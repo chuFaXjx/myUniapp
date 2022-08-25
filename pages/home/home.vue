@@ -11,12 +11,12 @@
             :columns="columns"
             @confirm="confirm"
             @cancel="cancel"
-          ></u-picker>
+          >
+          </u-picker>
         </view>
       </view>
     </u-navbar>
     <!-- 轮播图 -->
-
     <view class="u-demo-block">
       <u-swiper
         :list="list5"
@@ -24,14 +24,8 @@
         :autoplay="true"
         @click="handleSwap"
       >
-        <view slot="indicator" class="indicator">
-          <view
-            class="indicator__dot"
-            v-for="(item, index) in list5"
-            :key="index"
-            :class="[index === current && 'indicator__dot--active']"
-          >
-          </view>
+        <view v-for="item in list5" key="{item.id}">
+          <img src="{item.avatar}" alt="" />
         </view>
       </u-swiper>
       <view>
@@ -48,20 +42,182 @@
           </view>
         </u-modal>
       </view>
-      <!-- <u-gap bgColor="transparent" height="15"></u-gap> -->
     </view>
     <!-- 网格布局 -->
     <view class="grid">
       <u-grid :border="false" col="3">
-        <u-grid-item v-for="listItem in list" :key="listItem.id">
-          <u-icon
-            :customStyle="{ paddingTop: 20 + 'rpx' }"
-            :name="listItem.name"
-            :size="22"
-          ></u-icon>
+        <u-grid-item v-for="(listItem, listIndex) in list" :key="listItem.id">
+          <view class="imgbox">
+            <image
+              :src="listItem.describe"
+              alt=""
+              :customStyle="{ paddingTop: 10 + 'rpx' }"
+              class="imgdec"
+            >
+            </image>
+          </view>
+          <view class="u-demo-block">
+            <u-swiper
+              :list="list5"
+              @change="(e) => (current = e.current)"
+              :autoplay="true"
+              @click="handleSwap"
+            >
+              <view slot="indicator" class="indicator">
+                <view
+                  class="indicator__dot"
+                  v-for="(item, index) in list5"
+                  :key="index"
+                  :class="[index === current && 'indicator__dot--active']"
+                >
+                </view>
+              </view>
+            </u-swiper>
+            <view>
+              <u-modal
+                :show="show"
+                :title="title"
+                showCancelButton
+                confirmColor="#ADB3AB"
+                @confirm="confirm"
+                @cancel="cancel"
+              >
+                <view class="slot-content">
+                  <rich-text :nodes="content"></rich-text>
+                </view>
+              </u-modal>
+            </view>
+            <!-- <u-gap bgColor="transparent" height="15"></u-gap> -->
+          </view>
+          <!-- 网格布局 -->
+          <view class="grid">
+            <u-grid :border="false" col="3">
+              <u-grid-item v-for="listItem in list" :key="listItem.id">
+                <u-icon
+                  :customStyle="{ paddingTop: 20 + 'rpx' }"
+                  :name="listItem.name"
+                  :size="22"
+                ></u-icon>
 
-          <navigator :url="listItem.path" hover-class="navigator-hover">
-            <text class="grid-text">{{ listItem.title }}</text>
+                <navigator :url="listItem.path" hover-class="navigator-hover">
+                  <text class="grid-text">{{ listItem.title }}</text>
+                </navigator>
+              </u-grid-item>
+            </u-grid>
+            <u-toast ref="uToast" />
+          </view>
+          <view class="font">
+            <text class="workspace">名医工作室</text>
+          </view>
+          <view class="u-demo-block1">
+            <!-- 轮播图 -->
+            <navigator
+              url="/pages/doctormain/doctormain"
+              hover-class="navigator-hover"
+            >
+              <u-swiper
+                :list="list3"
+                previousMargin="30"
+                nextMargin="30"
+                circular
+                :autoplay="true"
+                radius="5"
+                bgColor="#ffffff"
+              >
+              </u-swiper>
+            </navigator>
+          </view>
+          <view class="font1">
+            <text class="workspace">资讯动态</text>
+            <text class="more">查看更多</text>
+            <u-icon
+              name="arrow-right"
+              color="#999"
+              size="18"
+              class="arrow"
+            ></u-icon>
+          </view>
+          <view class="word">
+            <view>
+              <navigator
+                url="/pages/wellknow/wellknow"
+                hover-class="navigator-hover"
+              >
+                <text class="text">科普动画 二孩妈妈的焦虑</text>
+                <text class="add">2022-5-29</text>
+              </navigator>
+            </view>
+            <hr />
+            <view>
+              <text class="text">科普动画1 二孩妈妈的焦虑</text>
+              <text class="add">2022-5-29</text>
+            </view>
+            <hr />
+            <view>
+              <text class="text">科普动画2 二孩妈妈的焦虑</text>
+              <text class="add">2022-5-29</text>
+            </view>
+          </view>
+          <view class="font2">
+            <text class="workspace">合作单位</text>
+            <navigator
+              url="/pages/lookmore/lookmore"
+              hover-class="navigator-hover"
+            >
+              <text class="more2">查看更多</text>
+            </navigator>
+            <u-icon
+              name="arrow-right"
+              color="#999"
+              size="18"
+              class="arrow"
+            ></u-icon>
+          </view>
+          <view class="photo">
+            <view class="imagebox">
+              <img src="../../static/5.png" @click="click" alt="" />
+            </view>
+            <view class="right">
+              <text class="p1">浙江大学附属第一医院</text>
+              <br />
+              <text class="p2">杭州市庆春路79号</text>
+              <br />
+              <u-button text="三级甲等" class="btn1" size="large"></u-button>
+              <navigator
+                url="/pages/detail/detail"
+                hover-class="navigator-hover"
+              >
+                <text class="detail">详情 >> </text>
+              </navigator>
+            </view>
+          </view>
+          <hr />
+          <navigator
+            url="/pages/workspace/workspace"
+            hover-class="navigator-hover"
+          >
+            <view class="photo">
+              <view class="imagebox">
+                <img src="../../static/6.png" @click="click" alt="" />
+              </view>
+              <view class="right">
+                <text class="p1">浙江大学附属第一医院</text>
+                <br />
+                <text class="p2">杭州市庆春路79号</text>
+                <br />
+                <u-button text="三级甲等" class="btn1"></u-button>
+                <navigator
+                  url="/pages/detail/detail"
+                  hover-class="navigator-hover"
+                >
+                  <text class="detail">详情 >> </text>
+                </navigator>
+              </view>
+            </view>
+          </navigator>
+          =======
+          <navigator url="/pages/fit/fit" hover-class="navigator-hover">
+            <text class="grid-text">{{ listItem.text }}</text>
           </navigator>
         </u-grid-item>
       </u-grid>
@@ -96,19 +252,12 @@
     <view class="word">
       <view>
         <navigator url="/pages/wellknow/wellknow" hover-class="navigator-hover">
-          <text class="text">科普动画 二孩妈妈的焦虑</text>
-          <text class="add">2022-5-29</text>
+          <view v-for="item in zixunlist" :key="item.id">
+            <text class="text">{{ item.title }}</text>
+            <text class="add">{{ item.time }}</text>
+          </view>
+          <hr />
         </navigator>
-      </view>
-      <hr />
-      <view>
-        <text class="text">科普动画1 二孩妈妈的焦虑</text>
-        <text class="add">2022-5-29</text>
-      </view>
-      <hr />
-      <view>
-        <text class="text">科普动画2 二孩妈妈的焦虑</text>
-        <text class="add">2022-5-29</text>
       </view>
     </view>
     <view class="font2">
@@ -118,31 +267,16 @@
       </navigator>
       <u-icon name="arrow-right" color="#999" size="18" class="arrow"></u-icon>
     </view>
-    <view class="photo">
-      <view class="imagebox">
-        <img src="../../static/5.png" @click="click" alt="" />
-      </view>
-      <view class="right">
-        <text class="p1">浙江大学附属第一医院</text>
-        <br />
-        <text class="p2">杭州市庆春路79号</text>
-        <br />
-        <u-button text="三级甲等" class="btn1" size="large"></u-button>
-        <navigator url="/pages/detail/detail" hover-class="navigator-hover">
-          <text class="detail">详情 >> </text>
-        </navigator>
-      </view>
-    </view>
-    <hr />
+    <!-- 合作单位 -->
     <navigator url="/pages/workspace/workspace" hover-class="navigator-hover">
-      <view class="photo">
-        <view class="imagebox">
-          <img src="../../static/6.png" @click="click" alt="" />
+      <view class="photo" v-for="imgitem in citylist" :key="imgitem.id">
+        <view class="imagebox1">
+          <image :src="imgitem.cooperimg" @click="click" alt=""></image>
         </view>
         <view class="right">
-          <text class="p1">浙江大学附属第一医院</text>
+          <text class="p1">{{ imgitem.title }}</text>
           <br />
-          <text class="p2">杭州市庆春路79号</text>
+          <text class="p2">{{ imgitem.text }}</text>
           <br />
           <u-button text="三级甲等" class="btn1"></u-button>
           <navigator url="/pages/detail/detail" hover-class="navigator-hover">
@@ -151,6 +285,7 @@
         </view>
       </view>
     </navigator>
+    >>>>>>> shouye2
 
     <view class="connect">
       <text class="workspace1">联系方式</text>
@@ -230,14 +365,9 @@ export default {
           path: "/pages/fit/star",
         },
       ],
-
-      list5: [
-        // `<img src='../../static/1.png' alt=''>`,
-        "https://cdn.uviewui.com/uview/swiper/swiper3.png",
-        "https://cdn.uviewui.com/uview/swiper/swiper2.png",
-        "https://cdn.uviewui.com/uview/swiper/swiper1.png",
-      ],
-
+      zixunlist: [],
+      citylist: [],
+      list5: [],
       selectIndex: 0,
       dataArr: this.getData(),
       onReady() {
@@ -245,14 +375,101 @@ export default {
           title: this.title,
         });
       },
-      list3: [
-        "https://cdn.uviewui.com/uview/swiper/swiper3.png",
-        "https://cdn.uviewui.com/uview/swiper/swiper2.png",
-        "https://cdn.uviewui.com/uview/swiper/swiper1.png",
-      ],
+      list3: [],
       areaShow: false,
       areaTxt: "",
     };
+  },
+  // 请求轮播图数据
+  created() {
+    uni.request({
+      // 跨域访问出现 request:fail invalid url是什么原因
+      /*#ifdef H5*/
+      url: "/api/getdoctorbanner",
+      /*#endif*/
+      /*#ifndef H5*/
+      url: "http://localhost:3309/getdoctorbanner",
+      /*#endif*/
+      success: (res) => {
+        console.log("@", res.data.data);
+        res.data.data.forEach((item, index) => {
+          this.list5.push(item.avatar);
+        });
+      },
+    });
+    // 医生集团
+    uni.request({
+      /*#ifdef H5*/
+      url: "/api/doctcompany",
+      /*#endif*/
+      /*#ifndef H5*/
+      url: "http://localhost:3309/doctcompany",
+      /*#endif*/
+      success: (res) => {
+        console.log("@@", res.data.data);
+        res.data.data.forEach((item, index) => {
+          this.columns.push(item.companyname);
+        });
+      },
+    });
+    // 名医工作室
+    uni.request({
+      /*#ifdef H5*/
+      url: "/api/getteambanner",
+      /*#endif*/
+      /*#ifndef H5*/
+      url: "http://localhost:3309/getteambanner",
+      /*#endif*/
+      success: (res) => {
+        console.log("@", res.data.data);
+        res.data.data.forEach((item, index) => {
+          this.list3.push(item.gridimg);
+        });
+      },
+    });
+    // 网格数据渲染
+    uni.request({
+      /*#ifdef H5*/
+      url: "/api/gridlist",
+      /*#endif*/
+      /*#ifndef H5*/
+      url: "http://localhost:3309/gridlist",
+      /*#endif*/
+      success: (res) => {
+        res.data.data.forEach((item, index) => {
+          this.list.push(item);
+          console.log("aaa", this.list);
+        });
+      },
+    });
+    // 资讯动态
+    uni.request({
+      /*#ifdef H5*/
+      url: "/api/getzixunlist",
+      /*#endif*/
+      /*#ifndef H5*/
+      url: "http://localhost:3309/getzixunlist",
+      /*#endif*/
+      success: (res) => {
+        res.data.data.forEach((item, index) => {
+          this.zixunlist.push(item);
+        });
+      },
+    });
+    // 合作单位
+    uni.request({
+      /*#ifdef H5*/
+      url: "/api/getCooperatelist",
+      /*#endif*/
+      /*#ifndef H5*/
+      url: "http://localhost:3309/getCooperatelist",
+      /*#endif*/
+      success: (res) => {
+        res.data.data.forEach((item, index) => {
+          this.citylist.push(item);
+        });
+      },
+    });
   },
   methods: {
     onClickItem(item, index) {
@@ -297,18 +514,15 @@ export default {
   },
 };
 </script>
-
 <style lang="scss">
 .back {
   background-color: #ffffff;
   height: 100px;
 }
-
 .grid {
   background-color: #ffffff;
   margin-top: -14px;
 }
-
 .grid-text {
   font-size: 14px;
   color: #909399;
@@ -317,32 +531,26 @@ export default {
   box-sizing: border-box;
   /* #endif */
 }
-
 .u-nav-slot {
   font-size: 22px;
   font-weight: 400;
   color: #fe902b;
   margin-top: 50px;
 }
-
 .u-nav-slot1 {
   font-size: 18px;
   color: #fe902b;
   margin-top: 50px;
 }
-
 .u-demo-block {
   margin-top: 100px;
 }
-
 .u-demo-block1 {
   margin-top: 0px;
 }
-
 .indicator {
   @include flex(row);
   justify-content: center;
-
   &__dot {
     height: 6px;
     width: 6px;
@@ -350,13 +558,11 @@ export default {
     background-color: rgba(255, 255, 255, 0.35);
     margin: 0 5px;
     transition: background-color 0.3s;
-
     &--active {
       background-color: #ffffff;
     }
   }
 }
-
 .indicator-num {
   padding: 2px 0;
   background-color: rgba(0, 0, 0, 0.35);
@@ -364,13 +570,11 @@ export default {
   width: 35px;
   @include flex;
   justify-content: center;
-
   &__text {
     color: #ffffff;
     font-size: 12px;
   }
 }
-
 .grid-bg {
   display: flex;
   flex-wrap: wrap;
@@ -381,7 +585,6 @@ export default {
   border-left: $grid-boder-width solid $grid-border-color;
   border-top: $grid-boder-width solid $grid-border-color;
 }
-
 .grid-item-bg {
   @include grid-column(3);
   padding: 5px;
@@ -395,7 +598,14 @@ export default {
   border-bottom: $grid-boder-width solid $grid-border-color;
   border: none;
 }
-
+.imgbox {
+  width: 20px;
+  height: 20px;
+}
+.imgdec {
+  width: 100%;
+  height: 100%;
+}
 .image {
   margin-top: 10px;
   background: #fff3e9;
@@ -404,16 +614,13 @@ export default {
   border-radius: 50%;
   height: 60px;
 }
-
 .u-navbar__content__title.data-v-95dec1ae {
   margin-top: -17px;
 }
-
 .u-navbar__content__title.data-v-95dec1ae {
   width: 100px;
   height: 44px;
 }
-
 .text {
   margin-top: 10px;
   display: block;
@@ -424,46 +631,40 @@ export default {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-
 .font {
   display: flex;
   width: 100%;
   background-color: #ffffff;
 }
-
 .font1 {
   display: flex;
   width: 100%;
   background-color: #ffffff;
   margin-top: 10px;
 }
-
 .font2 {
   display: flex;
   width: 100%;
   background-color: #ffffff;
   margin-top: 10px;
+  // margin-left: 10px;
 }
-
 .workspace {
   text-align: center;
   font-size: 20px;
   color: #fe902b;
   margin: 20px auto;
 }
-
 .more {
   font-size: unset;
   color: #000;
   margin-top: 27px;
 }
-
 .more2 {
   font-size: unset;
   color: #000;
   margin-top: 30px;
 }
-
 .banner1 {
   background-color: #ffffff;
   width: 90%;
@@ -471,137 +672,134 @@ export default {
   border: 1px solid #eee;
   border-radius: 10px;
 }
-
 .banner1::before {
   width: 10px;
   height: 10px;
   border-radius: 50%;
   border: 1px solid #eee;
 }
-
 .word {
   background-color: #ffffff;
   display: block;
   text-align: left;
   margin-top: -10px;
 }
-
 .text {
   margin-bottom: 20px;
   text-align: left;
   font-size: 20px;
   width: 100%;
+  margin-left: 10px;
 }
-
 .add {
   margin-bottom: 10px;
+  margin-left: 10px;
 }
-
 .photo {
   display: flex;
   background-color: #ffffff;
 }
-
 .imagebox {
   width: 40px;
   height: 40px !important;
   flex: 1;
 }
-
 .leftimg img {
   width: 100%;
   height: 100%;
 }
-
 .right {
   flex: 3;
   margin-left: 10px;
 }
-
 .p1 {
   font-size: 22px;
 }
-
 .p2 {
   font-size: 20px;
   // text-align: left;
 }
-
 .detail {
   color: #fe902b;
   font-size: 18px;
 }
-
 .btn1 {
   width: 60px;
   height: 30px;
   background-color: #ffffff;
 }
-
 .connect {
   margin-top: 10px;
   display: flex;
   background-color: #ffffff;
 }
-
 .workspace1 {
   text-align: center;
   font-size: 20px;
   color: #fe902b;
   margin: 20px auto;
 }
-
 .bg {
   background-color: #ffffff;
   display: flex;
 }
-
 .tele {
   flex: 1;
   width: 20px;
-  height: 20px;
+  height: 27px;
 }
-
 .tele img {
   width: 100%;
   height: 100%;
 }
-
 .rightfont {
   flex: 4;
   margin-left: 10px;
 }
-
 .u-button--large.data-v-2bf0e569 {
   /* width: 100%; */
   width: 100px;
   height: 50px;
   padding: 0 15px;
 }
-
 .u-button.data-v-2bf0e569 {
   width: 100px !important;
   height: 50px !important;
   margin-top: 20px;
 }
-
-image {
-  max-width: 100%;
-  width: 140px;
-  height: 140px;
-  // inline-block: ;
-  position: relative;
-  z-index: 0;
-}
-
 .tele {
   flex: 1;
   width: 14px;
   height: 22px;
   font-size: 9px;
 }
-
 .u-grid-item.data-v-5b3a01af {
   margin-top: 20px !important;
+}
+image {
+  margin-top: 10px;
+  max-width: 100%;
+  width: 60px;
+  height: 60px;
+  position: relative;
+  z-index: 0;
+}
+.imgbox {
+  width: 51px;
+  height: 51px;
+  margin-bottom: 10px;
+}
+.imagebox1 {
+  width: 80px;
+  height: 80px;
+  margin-left: 10px;
+}
+.imagebox1 image {
+  margin-top: 10px;
+  max-width: 100%;
+  width: 80px;
+  height: 80px;
+  position: relative;
+  z-index: 0;
 }
 </style>
