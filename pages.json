@@ -144,46 +144,49 @@
 			}
 		}
 		// 用户协议
-	    ,{
-            "path" : "pages/wxlogin/second/userAgreement",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "用户协议",
-                "enablePullDownRefresh": false
-            }
-        }
-        ,
+		, {
+			"path": "pages/wxlogin/second/userAgreement",
+			"style": {
+				"navigationBarTitleText": "用户协议",
+				"enablePullDownRefresh": false
+			}
+		},
 		// 个人中心/我的地址
 		{
-            "path" : "pages/user/sonPages/myAdress",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "设置地址",
-                "enablePullDownRefresh": false
-            }
-            
-        },
+			"path": "pages/user/sonPages/myAdress",
+			"style": {
+				"navigationBarTitleText": "设置地址",
+				"enablePullDownRefresh": false
+			}
+
+		},
 		// 个人中心/地址管理/新增地址
 		{
-            "path" : "pages/user/sonPages/addNewAdress",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "新增地址",
-                "enablePullDownRefresh": false
-            }
-            
-        },
+			"path": "pages/user/sonPages/addNewAdress",
+			"style": {
+				"navigationBarTitleText": "新增地址",
+				"enablePullDownRefresh": false
+			}
+
+		},
 		// 个人中心/健康档案
 		{
-            "path" : "pages/user/sonPages/jiankanglist",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "健康档案",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-    ],
+			"path": "pages/user/sonPages/jiankanglist",
+			"style": {
+				"navigationBarTitleText": "健康档案",
+				"enablePullDownRefresh": false
+			}
+		},
+		// 健康处方页面
+		{
+			"path": "pages/fit/hourglass",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}
+	],
 	"tabBar": {
 		"selectedColor": "#008000",
 		"list": [{
