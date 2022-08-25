@@ -124,11 +124,12 @@
 		{
 			"path": "pages/user/sonPages/myLunTan",
 			"style": {
-				"navigationBarTitleText": "我的论坛",
+				"navigationBarTitleText": "创建论坛",
 				"enablePullDownRefresh": false
 			}
-
-		}, {
+		},
+		// 个人中心/我的处方
+		{
 			"path": "pages/user/sonPages/myChuFang",
 			"style": {
 				"navigationBarTitleText": "我的处方",
@@ -192,19 +193,19 @@
 		"list": [{
 				"pagePath": "pages/home/home",
 				"text": "首页",
-				"iconPath": "static/home1.png",
-				"selectedIconPath": "static/home.png"
+				"iconPath": "static/imges/home.png",
+				"selectedIconPath": "static/imges/homeActive.png"
 			},
 			{
 				"pagePath": "pages/tabBar/tabBarExpert",
-				"iconPath": "static/imges/expertLogo.png",
-				"selectedIconPath": "static/imges/expertLogo2.png",
+				"iconPath": "static/imges/zhuanjia.png",
+				"selectedIconPath": "static/imges/zhuanjiaActive.png",
 				"text": "专家说"
 			},
 			{
 				"pagePath": "pages/user/user",
-				"iconPath": "static/imges/myLogo.png",
-				"selectedIconPath": "static/imges/myLogo2.png",
+				"iconPath": "static/imges/myCenter.png",
+				"selectedIconPath": "static/imges/myCenterActive.png",
 				"text": "我的"
 			}
 		]

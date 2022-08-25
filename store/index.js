@@ -4,12 +4,18 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
 	state: {
-		isLogin: false,
+		token: "" || uni.getStorageSync('WX_TOKEN_KEY'),
+		userInfo: {},
+		num: 123
 	},
 	mutations: {
-		setIsLogin(state, data) {
-			state.isLogin = data
-		}
+		setUserInfo(state, userInfo) {
+			state.userInfo = userInfo
+		},
+		setToken(state, token) {
+			state.token = token
+		},
+
 	},
 	actions: {}
 })
