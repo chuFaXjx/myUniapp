@@ -18,7 +18,8 @@
     "pages/user/sonPages/myLunTan",
     "pages/user/sonPages/myChuFang",
     "pages/wxlogin/wxlogin",
-    "pages/wxlogin/second/userAgreement"
+    "pages/wxlogin/second/userAgreement",
+    "pages/fit/hourglass"
   ],
   "subPackages": [],
   "window": {
@@ -52,5 +53,6 @@
   },
   "usingComponents": {
     "cu-custom": "/colorui/components/cu-custom"
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

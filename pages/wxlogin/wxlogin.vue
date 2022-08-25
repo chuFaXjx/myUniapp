@@ -53,35 +53,44 @@
 				this.isLogin = !this.isLogin
 			},
 			handleLogin() {
-				uni.login({
-					success: (r) => {
-
-						console.log(r);
-						uni.request({
-							url: "http://localhost:3000/wxlogin",
-							method: "GET",
-							data: {
-								code: r.code,
+				uni.getUserProfile({
+					desc: '获取您的名称、头像、地区',
+					success: (userInfo) => {
+						console.log(userInfo);
+						uni.login({
+							success: (r) => {
+								uni.request({
+									url: "http://localhost:3000/wxlogin",
+									method: "GET",
+									data: {
+										code: r.code,
+									},
+									success: (res) => {
+										console.log(res);
+										uni.setStorage({
+											key: 'WX_TOKEN_KEY',
+											data: res.data.data.session_key,
+										});
+										uni.switchTab({
+											url: '/pages/user/user'
+										});
+									},
+									fail: (err) => {
+										console.log(err);
+									}
+								})
 							},
-							success: (res) => {
-								uni.setStorage({
-									key: 'WX_TOKEN_KEY',
-									data: res.data.data.session_key,
-								});
-								uni.switchTab({
-									url: '/pages/user/user'
-								});
-							},
-							fail: (err) => {
-								console.log(err);
+							fail: (error) => {
+								console.log(error)
 							}
+						
 						})
 					},
-					fail: (error) => {
-						console.log(error)
+					fail:(err)=> {
+						console.log(err);
 					}
-
 				})
+				
 
 			}
 
