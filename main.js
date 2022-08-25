@@ -8,7 +8,10 @@ import cuCustom from './colorui/components/cu-custom.vue'
 Vue.component('cu-custom', cuCustom)
 Vue.config.productionTip = false
 App.mpType = 'app'
+import store from './store/index.js'
+Vue.prototype.$store = store
 const app = new Vue({
+	store,
 	...App
 })
 app.$mount()

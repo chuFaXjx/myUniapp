@@ -28,17 +28,13 @@
 			<navigator url="/pages/wxlogin/wxlogin"><u-icon name="account-fill" size="50px" space="10px" labelSize="20px" label="登录/注册"></u-icon></navigator>
 		</view>
 		<view class="main">
-			<navigator url="/pages/user/sonPages/myLunTan" hover-class="navigator-hover">
-				<u-icon name="chat" size="20px" space="10px" labelSize="20px" label="我的论坛"></u-icon>
-			</navigator>
+			<navigator url="/pages/user/sonPages/myLunTan"><u-icon name="chat" size="20px" space="10px" labelSize="20px" label="我的论坛"></u-icon></navigator>
 			<u-divider></u-divider>
-			<navigator url="/pages/user/sonPages/myChuFang" hover-class="navigator-hover">
-				<u-icon name="file-text" size="20px" space="10px" labelSize="20px" label="我的处方"></u-icon>
-			</navigator>
+			<navigator url="/pages/user/sonPages/myChuFang"><u-icon name="file-text" size="20px" space="10px" labelSize="20px" label="我的处方"></u-icon></navigator>
 			<u-divider></u-divider>
-			<u-icon name="map" size="20px" space="10px" labelSize="20px" label="地址管理"></u-icon>
+			<navigator url="/pages/user/sonPages/myAdress"><u-icon name="map" size="20px" space="10px" labelSize="20px" label="地址管理"></u-icon></navigator>
 			<u-divider></u-divider>
-			<u-icon name="file-text" size="20px" space="10px" labelSize="20px" label="健康档案"></u-icon>
+			<navigator url="/pages/user/sonPages/jiankanglist"><u-icon name="file-text" size="20px" space="10px" labelSize="20px" label="健康档案"></u-icon></navigator>
 			<u-divider></u-divider>
 			<u-icon name="order" size="20px" space="10px" labelSize="20px" label="我的名片"></u-icon>
 			<u-divider></u-divider>

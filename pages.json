@@ -152,6 +152,37 @@
                 "enablePullDownRefresh": false
             }
         }
+        ,
+		// 个人中心/我的地址
+		{
+            "path" : "pages/user/sonPages/myAdress",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "设置地址",
+                "enablePullDownRefresh": false
+            }
+            
+        },
+		// 个人中心/地址管理/新增地址
+		{
+            "path" : "pages/user/sonPages/addNewAdress",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "新增地址",
+                "enablePullDownRefresh": false
+            }
+            
+        },
+		// 个人中心/健康档案
+		{
+            "path" : "pages/user/sonPages/jiankanglist",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "健康档案",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"tabBar": {
 		"selectedColor": "#008000",
