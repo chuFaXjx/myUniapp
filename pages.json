@@ -186,8 +186,18 @@
 				"enablePullDownRefresh": false
 			}
 
-		}
-	],
+		},
+		// 个人中心/编辑资料
+		{
+            "path" : "pages/user/sonPages/editMsg",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "编辑资料",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	"tabBar": {
 		"selectedColor": "#008000",
 		"list": [{

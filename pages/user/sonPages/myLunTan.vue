@@ -1,6 +1,10 @@
 <template>
 	<view>
-		<text>设置论坛资料</text>
+		<text>我创建的论坛</text>
+		<view class="">
+			<u--image src="../../../static/1.png" width="80px" height="80px" @click="click"></u--image>
+			<text>长风破浪会有时，直挂云帆济沧海</text>
+		</view>
 		<u--input class="input" border="surround" placeholder="请输入论坛名称" v-model="value" @change="change"></u--input>
 		<u--textarea v-model="value1" placeholder="请输入论坛简介"></u--textarea>
 		<u-upload :fileList="fileList1" @afterRead="afterRead" @delete="deletePic" name="1" multiple :maxCount="10"></u-upload>

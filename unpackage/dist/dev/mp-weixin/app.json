@@ -22,7 +22,8 @@
     "pages/user/sonPages/myAdress",
     "pages/user/sonPages/addNewAdress",
     "pages/user/sonPages/jiankanglist",
-    "pages/fit/hourglass"
+    "pages/fit/hourglass",
+    "pages/user/sonPages/editMsg"
   ],
   "subPackages": [],
   "window": {
@@ -56,6 +57,5 @@
   },
   "usingComponents": {
     "cu-custom": "/colorui/components/cu-custom"
-  },
-  "sitemapLocation": "sitemap.json"
+  }
 }
