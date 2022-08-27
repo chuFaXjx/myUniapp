@@ -1,12 +1,37 @@
 <template>
-	<view class="main"><u-button class="add" type="primary" size="large" @click="handleClcik">新增地址</u-button></view>
+	<view class="main">
+		<u-swipe-action>
+			<u-swipe-action-item :options="options2">
+				<view class="dizhi" v-for="(item, idx) in adressList" :key="idx">
+					<text class="">{{ item.name }}</text>
+					<text class="">{{ item.phone }}</text>
+					<text class="">{{ item.adress }}{{ item.moreAdress }}</text>
+				</view>
+			</u-swipe-action-item>
+		</u-swipe-action>
+		<u-button class="add" type="primary" size="large" @click="handleClcik">新增地址</u-button>
+	</view>
 </template>
 
 <script>
 export default {
 	data() {
 		return {
-			adressList: []
+			adressList: [],
+			options2: [
+				{
+					text: '编辑',
+					style: {
+						backgroundColor: '#3c9cff'
+					}
+				},
+				{
+					text: '删除',
+					style: {
+						backgroundColor: '#f56c6c'
+					}
+				}
+			]
 		};
 	},
 	onShow: function() {
@@ -37,6 +62,10 @@ export default {
 	/deep/.u-button--primary.data-v-2bf0e569 {
 		position: fixed !important;
 		bottom: 20px !important;
+	}
+	.dizhi {
+		width: 100%;
+		height: 60rpx;
 	}
 }
 </style>
