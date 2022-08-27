@@ -4,26 +4,30 @@
 			<view class="top">
 				<view class="left"><u-avatar :src="avatarUrl" size="55"></u-avatar></view>
 				<view class="middle">
-					<!-- <open-data type="userNickName"></open-data>
-					<open-data type="userAvatarUrl"></open-data> -->
-					<view class="name" v-if="nickName">{{ nickName }}</view>
-					<view class="name" v-else>{{ realName }}</view>
-					<text class="tel">18749531254</text>
+					<view class="name">{{ useInfo.realName }}</view>
+					<text class="tel">{{ useInfo.phone }}</text>
+					<text class="tel1">职位：{{ useInfo.position }}</text>
 				</view>
 				<view class="right"><u-button @click="editMsg" shape="circle" size="mini" type="primary" :plain="true" text="编辑资料"></u-button></view>
 			</view>
 			<view class="foot">
 				<view class="foot_left">
-					<view>0</view>
-					<view>我的医生</view>
+					<navigator url="/pages/user/sonPages/mydoctor">
+						<view>0</view>
+						<view>我的医生</view>
+					</navigator>
 				</view>
 				<view class="foot_left">
-					<view>0</view>
-					<view>我的圈子</view>
+					<navigator url="/pages/user/sonPages/joinKangyouhui">
+						<view>0</view>
+						<view>我的圈子</view>
+					</navigator>
 				</view>
 				<view class="foot_left">
-					<view>0.00</view>
-					<view>积分兑换</view>
+					<navigator url="/pages/user/sonPages/jifen">
+						<view>0.00</view>
+						<view>积分兑换</view>
+					</navigator>
 				</view>
 			</view>
 		</view>
@@ -32,8 +36,6 @@
 		</view>
 		<view class="main">
 			<u-toast ref="uToast"></u-toast>
-			<u-icon @click="goLuntan" name="chat" size="50rpx" space="30rpx" labelSize="50rpx" label="我的论坛"></u-icon>
-			<u-divider></u-divider>
 			<u-icon @click="goChuFang" name="file-text" size="50rpx" space="30rpx" labelSize="50rpx" label="我的处方"></u-icon>
 			<u-divider></u-divider>
 			<u-icon @click="goDiZhi" name="map" size="50rpx" space="30rpx" labelSize="50rpx" label="地址管理"></u-icon>
@@ -43,10 +45,6 @@
 			<u-icon @click="goMyCard" name="order" size="50rpx" space="30rpx" labelSize="50rpx" label="我的名片"></u-icon>
 			<u-divider></u-divider>
 			<u-icon @click="goZhuanJia" name="account" size="50rpx" space="30rpx" labelSize="50rpx" label="我的专家"></u-icon>
-			<view v-if="token && token !== ''">
-				<u-divider></u-divider>
-				<u-icon name="account" size="50rpx" space="30rpx" labelSize="50rpx" label="团友订单"></u-icon>
-			</view>
 		</view>
 		<u-button v-if="token && token !== ''" @click="logOut" type="primary" size="large" text="退出登录"></u-button>
 	</view>
@@ -58,7 +56,8 @@ export default {
 	data() {
 		return {
 			isLogin: false,
-			token: ''
+			token: '',
+			useInfo: ''
 		};
 	},
 	onShow: function() {
@@ -67,33 +66,31 @@ export default {
 		// this.realName = this.$store.state.userInfo.realName;
 		// console.log(this.nickName, this.realName);
 		// console.log(this.$store.state.userInfo);
+		uni.request({
+			method: 'GET',
+			url: 'http://localhost:3000/getBusinessCard',
+			data: {
+				id: '1'
+			},
+			success: res => {
+				const {
+					data: { data }
+				} = res;
+				this.useInfo = data[0];
+				console.log(this.useInfo);
+			}
+		});
 	},
 	computed: {
-		nickName() {
-			return JSON.parse(uni.getStorageSync('USER_INFO')).nickName;
-		},
+		// nickName() {
+		// 	return JSON.parse(uni.getStorageSync('USER_INFO')).nickName;
+		// },
 		avatarUrl() {
 			return JSON.parse(uni.getStorageSync('USER_INFO')).avatarUrl;
 		}
 	},
 	methods: {
 		//  登录校验，未登录不进行跳转
-		goLuntan() {
-			if (this.token && this.token !== '') {
-				uni.navigateTo({
-					url: '/pages/user/sonPages/myLunTan'
-				});
-			} else {
-				this.$refs.uToast.show({
-					position: 'top',
-					type: 'error',
-					icon: false,
-					title: '失败主题',
-					message: '请登录后再试',
-					iconUrl: 'https://cdn.uviewui.com/uview/demo/toast/error.png'
-				});
-			}
-		},
 		goChuFang() {
 			if (this.token && this.token !== '') {
 				uni.navigateTo({
@@ -221,10 +218,14 @@ export default {
 			}
 			.tel {
 				font-size: 16rpx * 2;
+				width: 60rpx;
+			}
+			.tel1 {
+				margin-left: 10rpx;
 			}
 		}
 		.right {
-			margin-left: 100rpx * 2;
+			margin-left: 100rpx;
 		}
 	}
 	.foot {

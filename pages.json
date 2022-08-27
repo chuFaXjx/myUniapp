@@ -120,14 +120,6 @@
 				"enablePullDownRefresh": false
 			}
 		},
-		// 个人中心/我的论坛
-		{
-			"path": "pages/user/sonPages/myLunTan",
-			"style": {
-				"navigationBarTitleText": "创建论坛",
-				"enablePullDownRefresh": false
-			}
-		},
 		// 个人中心/我的处方
 		{
 			"path": "pages/user/sonPages/myChuFang",
@@ -185,7 +177,6 @@
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
 			}
-
 		},
 		// 个人中心/编辑资料
 		{
@@ -193,6 +184,33 @@
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "编辑资料",
+                "enablePullDownRefresh": false
+            }
+        },
+		// 个人中心 / 我的医生
+		{
+            "path" : "pages/user/sonPages/mydoctor",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "医生列表",
+                "enablePullDownRefresh": false
+            }
+        },
+		// 个人中心/我的圈子
+		{
+            "path" : "pages/user/sonPages/joinKangyouhui",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "康友会",
+                "enablePullDownRefresh": false
+            }
+        },
+		// 个人中心 / 积分兑换
+		{
+            "path" : "pages/user/sonPages/jifen",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "积分兑换",
                 "enablePullDownRefresh": false
             }
             

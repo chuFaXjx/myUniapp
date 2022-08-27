@@ -15,7 +15,6 @@
     "pages/workspace/workspace",
     "pages/lookmore/lookmore",
     "pages/hdetail/hdetail",
-    "pages/user/sonPages/myLunTan",
     "pages/user/sonPages/myChuFang",
     "pages/wxlogin/wxlogin",
     "pages/wxlogin/second/userAgreement",
@@ -23,7 +22,10 @@
     "pages/user/sonPages/addNewAdress",
     "pages/user/sonPages/jiankanglist",
     "pages/fit/hourglass",
-    "pages/user/sonPages/editMsg"
+    "pages/user/sonPages/editMsg",
+    "pages/user/sonPages/mydoctor",
+    "pages/user/sonPages/joinKangyouhui",
+    "pages/user/sonPages/jifen"
   ],
   "subPackages": [],
   "window": {
@@ -57,6 +59,5 @@
   },
   "usingComponents": {
     "cu-custom": "/colorui/components/cu-custom"
-  },
-  "sitemapLocation": "sitemap.json"
+  }
 }
