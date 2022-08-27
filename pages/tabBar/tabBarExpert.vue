@@ -64,12 +64,10 @@
 </script>
 
 <style>
-	.expert-body{
-		background-color: #ffffff !important;
-		margin-top: -8px !important;
-	}
+	/* .expert-body{
+		background-color: #ffffff;
+	} */
 	.expert-inp {
-		padding-top: 1px;
 		display: flex;
 		margin: 20rpx;
 	}
@@ -97,7 +95,7 @@
 	.kong {
 		width: 100%;
 		height: 5px;
-		background-color: #F1F1F1;
+		background-color: #EFEFF4;
 	}
 
 	.view-context {

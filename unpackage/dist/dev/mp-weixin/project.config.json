@@ -7,7 +7,7 @@
   "setting": {
     "urlCheck": false,
     "es6": true,
-    "postcss": true,
+    "postcss": false,
     "minified": true,
     "checkSiteMap": false,
     "babelSetting": {
@@ -17,8 +17,8 @@
     }
   },
   "compileType": "miniprogram",
-  "libVersion": "2.25.3",
-  "appid": "wxd20152f73e4537d5",
+  "libVersion": "2.25.4",
+  "appid": "wx7300a5a53e5987c4",
   "projectname": "my-Uniapp",
   "condition": {},
   "editorSetting": {

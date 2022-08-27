@@ -10,7 +10,7 @@
 		</view>
 		<view class="name">
 			<text class="xingming">地区：</text>
-			<u-cell-group><u-cell icon="map" @click="() => (show = true)" :title="adress" arrow-direction="right"></u-cell></u-cell-group>
+			<u-cell-group><u-cell icon="map" @click="() => (show = true)" title="停车坐爱枫林晚" arrow-direction="right"></u-cell></u-cell-group>
 		</view>
 		<view class="name"><u-picker :show="show" ref="uPicker" :columns="columns" @confirm="confirm" @change="changeHandler" @cancel="() => (show = false)"></u-picker></view>
 		<view class="name">
@@ -26,7 +26,6 @@ export default {
 		return {
 			value: '',
 			show: false,
-			adress: '',
 			columns: [['中国', '美国'], ['深圳', '厦门', '上海', '拉萨']],
 			columnData: [['深圳', '厦门', '上海', '拉萨'], ['得州', '华盛顿', '纽约', '阿拉斯加']]
 		};
