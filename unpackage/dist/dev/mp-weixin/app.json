@@ -21,11 +21,28 @@
     "pages/user/sonPages/myAdress",
     "pages/user/sonPages/addNewAdress",
     "pages/user/sonPages/jiankanglist",
-    "pages/fit/hourglass",
     "pages/user/sonPages/editMsg",
     "pages/user/sonPages/mydoctor",
     "pages/user/sonPages/joinKangyouhui",
-    "pages/user/sonPages/jifen"
+    "pages/user/sonPages/jifen",
+    "pages/fit/hourglass",
+    "pages/kangyou/kangyou",
+    "pages/gongyi/gongyi",
+    "pages/jituan/jituan",
+    "pages/chufang/chufang",
+    "pages/online/online",
+    "pages/duihuan/duihuan",
+    "pages/luntanmain/luntanmain",
+    "pages/publish/publish",
+    "pages/zhongliu/zhongliu",
+    "pages/weiai/weiai",
+    "pages/emo/emo",
+    "pages/sleep/sleep",
+    "pages/renji/renji",
+    "pages/dream/dream",
+    "pages/tantao/tantao",
+    "pages/fuqiang/fuqiang",
+    "pages/user/sonPages/editAdress"
   ],
   "subPackages": [],
   "window": {
@@ -59,6 +76,5 @@
   },
   "usingComponents": {
     "cu-custom": "/colorui/components/cu-custom"
-  },
-  "sitemapLocation": "sitemap.json"
+  }
 }

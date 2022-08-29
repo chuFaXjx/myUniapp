@@ -1,8 +1,18 @@
 <template>
 	<view class="main">
+		<u-toast ref="uToast"></u-toast>
 		<u-swipe-action>
-			<u-swipe-action-item :options="options2">
-				<view class="dizhi" v-for="(item, idx) in adressList" :key="idx">
+			<u-swipe-action-item
+				v-for="(item, idx) in adressList"
+				:key="item.id"
+				@click="
+					name => {
+						edit(name, item.id);
+					}
+				"
+				:options="options2"
+			>
+				<view class="dizhi">
 					<text class="">{{ item.name }}</text>
 					<text class="">{{ item.phone }}</text>
 					<text class="">{{ item.adress }}{{ item.moreAdress }}</text>
@@ -42,7 +52,6 @@ export default {
 				const {
 					data: { data }
 				} = res;
-				console.log(data);
 				this.adressList = data;
 			}
 		});
@@ -51,6 +60,39 @@ export default {
 		// 点击新增地址跳转页面
 		handleClcik() {
 			uni.$u.route('/pages/user/sonPages/addNewAdress');
+		},
+		edit(name, id) {
+			console.log(name, id);
+			// 编辑
+			if (name.index == 0) {
+				uni.navigateTo({
+					url:`/pages/user/sonPages/editAdress?id=${id}`,
+				})
+			} else {
+				uni.request({
+					method: 'DELETE',
+					url: `http://localhost:3000/delAdress?id=${id}`,
+					success: res => {
+						this.$refs.uToast.show({
+							position: 'top',
+							type: 'success',
+							title: '成功主题',
+							message: '删除成功',
+							iconUrl: 'https://cdn.uviewui.com/uview/demo/toast/success.png'
+						});
+						uni.request({
+							method: 'GET',
+							url: 'http://localhost:3000/getAdress',
+							success: res => {
+								const {
+									data: { data }
+								} = res;
+								this.adressList = data;
+							}
+						});
+					}
+				});
+			}
 		}
 	}
 };
@@ -65,7 +107,9 @@ export default {
 	}
 	.dizhi {
 		width: 100%;
-		height: 60rpx;
+		height: 120rpx;
+		font-size: 35rpx;
+		line-height: 120rpx;
 	}
 }
 </style>

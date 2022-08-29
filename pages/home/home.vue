@@ -23,9 +23,8 @@
 		<view class="grid">
 			<u-grid :border="false" col="3">
 				<u-grid-item v-for="(listItem, listIndex) in list" :key="listItem.id">
-					<view class="imgbox"><image :src="listItem.describe" alt="" :customStyle="{ paddingTop: 10 + 'rpx' }" class="imgdec"></image></view>
-
-					<navigator url="/pages/fit/fit" hover-class="navigator-hover">
+					<navigator :url="`/pages${listItem.url}${listItem.url}`" hover-class="navigator-hover">
+						<view class="imgbox"><image :src="listItem.describe" alt="" :customStyle="{ paddingTop: 10 + 'rpx' }" class="imgdec"></image></view>
 						<text class="grid-text">{{ listItem.text }}</text>
 					</navigator>
 				</u-grid-item>
@@ -65,7 +64,7 @@
 			<view class="photo" v-for="imgitem in citylist" :key="imgitem.id">
 				<view class="imagebox1"><image :src="imgitem.cooperimg" @click="click" alt=""></image></view>
 				<view class="right">
-					<text class="p1">{{ imgitem.title }}</text>
+					<text class="p1">{{ imgitem.title}}</text>
 					<br />
 					<text class="p2">{{ imgitem.text }}</text>
 					<br />
@@ -81,7 +80,7 @@
 			<view class="rightfont"><text>0571-89938120</text></view>
 			<br />
 		</view>
-		<view class="bg">
+		<view class="bg"> 
 			<view class="tele"><img src="../../static/computer.png" alt="" /></view>
 			<view class="rightfont"><text>http://www.8111.cn/</text></view>
 		</view>
@@ -102,6 +101,7 @@ export default {
 			content: '',
 			columns: [],
 			list: [],
+			url:'',
 			zixunlist: [],
 			citylist: [],
 
@@ -176,7 +176,8 @@ export default {
 			success: res => {
 				res.data.data.forEach((item, index) => {
 					this.list.push(item);
-					console.log('aaa', this.list);
+					console.log('qqqq',item.url);
+					console.log('11',this.list);
 				});
 			}
 		});
@@ -388,6 +389,7 @@ export default {
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	overflow: hidden;
+	
 }
 
 .font {

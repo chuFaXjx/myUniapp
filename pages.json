@@ -170,14 +170,6 @@
 				"enablePullDownRefresh": false
 			}
 		},
-		// 健康处方页面
-		{
-			"path": "pages/fit/hourglass",
-			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
-		},
 		// 个人中心/编辑资料
 		{
             "path" : "pages/user/sonPages/editMsg",
@@ -211,6 +203,178 @@
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "积分兑换",
+                "enablePullDownRefresh": false
+            }
+        },
+		// 健康处方页面
+		{
+			"path": "pages/fit/hourglass",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}
+		// 康友会页面
+	    ,{
+            "path" : "pages/kangyou/kangyou",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "康友会",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+		// 公益健康
+        ,{
+            "path" : "pages/gongyi/gongyi",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "公益健康",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+		// 医生集团
+        ,{
+            "path" : "pages/jituan/jituan",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "医生集团",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+		// 健康处方
+        ,{
+            "path" : "pages/chufang/chufang",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "健康处方",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+		// 名医在线
+        ,{
+            "path" : "pages/online/online",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "名医在线",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+		// 积分兑换
+        ,{
+            "path" : "pages/duihuan/duihuan",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "积分兑换",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+		// 论坛主页
+        ,{
+            "path" : "pages/luntanmain/luntanmain",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "论坛主页",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+		// 发帖
+        ,{
+            "path" : "pages/publish/publish",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "发帖",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+		// 科普下的肿瘤详情
+        ,{
+            "path" : "pages/zhongliu/zhongliu",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "详情",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+		// 胃癌
+        ,{
+            "path" : "pages/weiai/weiai",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "详情",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/emo/emo",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "详情",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/sleep/sleep",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "详情",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/renji/renji",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "详情",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/dream/dream",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "详情",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/tantao/tantao",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "详情",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/fuqiang/fuqiang",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "详情",
+                "enablePullDownRefresh": false
+            }
+            
+        },
+		// 个人中心/地址管理/编辑地址
+		{
+            "path" : "pages/user/sonPages/editAdress",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "编辑地址",
                 "enablePullDownRefresh": false
             }
             
